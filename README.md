@@ -50,15 +50,15 @@ Sinclair (2003, xiii)
 ```python
 >>> from pelitk import conc
 >>> tok_text = ['The', 'key', 'word', 'in', 'this', 'text', 'is', 'the', 'noun', 'platypus', '.',
-               'I', 'want', 'to', 'see', 'the', 'cotext', 'every', 'time', 'the', 'word', 'platypus', 'occurs', '.']
+               'I', 'want', 'to', 'see', 'the', 'context', 'every', 'time', 'the', 'word', 'platypus', 'occurs', '.']
 
 >>> print(conc.concordance(tok_text,'platypus',5))
 [('this text is the noun', 'platypus', '. I want to see'),
-('cotext every time the word', 'platypus', 'occurs .   ')]
+('context every time the word', 'platypus', 'occurs .   ')]
 
 >>> print(conc.concordance(tok_text,'platypus',5,pretty=True))
 ['                   this text is the noun   platypus   . I want to see                         ',
- '              cotext every time the word   platypus   occurs .                                ']
+ '              context every time the word   platypus   occurs .                                ']
 ```
 
 <br>
@@ -75,7 +75,7 @@ pretty   | optional True/False argument (default is 'False'). If True, the outpu
 
 Returning to the example, we see that we have selected a _span_ of 5 words on either side of the key word (or node), which is a common span size, but which could be increased to allow for greater context. The second output shows the difference when the `pretty` argument is set to 'True'. In the 'pretty' format, it is easier to scan visually, but it is more difficult to further process the data.
 
-It is also possible to use `conc.py` with a _list_ of key words, rather than a single key word. For a demonstration of how to do so, see the [`PELIC_concordancing_tutorial`](https://github.com/ELI-Data-Mining-Group/PELIC_dataset/blob/master/tutorials/PELIC_concordancing_tutorial.ipynb) which compiles a concordance list with a list of nine different verbs.
+It is also possible to use `conc.py` with a _list_ of key words, rather than a single key word. For a demonstration of how to do so, see the [`PELIC_concordancing_tutorial`](https://github.com/ELI-Data-Mining-Group/PELIC-dataset/blob/master/tutorials/PELIC_concordancing_tutorial.ipynb) which compiles a concordance list with a list of nine different verbs.
 
 For more example code and a full description of the functions (including their arguments and sub-functions), see [`CONC.md`](https://github.com/ELI-Data-Mining-Group/pelitk/blob/master/docs/CONC.md) and [`conc.py`](https://github.com/ELI-Data-Mining-Group/pelitk/blob/master/pelitk/conc.py).
 
